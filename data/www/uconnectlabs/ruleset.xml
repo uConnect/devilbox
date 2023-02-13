@@ -2,6 +2,9 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="uConnect Coding Standards" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
 	<description>uConnect Coding Standards</description>
 
+	<!-- Check PHP and PHTML files. -->
+	<arg name="extensions" value="php,phtml,inc"/>
+
 	<!-- Include the WordPress standard. -->
 	<rule ref="WordPress">
 		<exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
