@@ -25,8 +25,11 @@ services:
       - httpd
   php:
     ports:
-    ## Expose the Live Trace server port. See bin/trace_servers/live_trace.php
-    - "61211:61211"
+      ## Expose the Live Trace server port. See bin/trace_servers/live_trace.php
+      - "61211:61211"
+    extra_hosts:
+      ## Enable Xdebug to call host
+      - "host.docker.internal:host-gateway"
   ngrok:
     image: devilbox/ngrok:0.3
     hostname: ngrok
