@@ -46,7 +46,7 @@ define( 'UC_USER_IMPORT_LIMIT', 20 );
 
 define( 'ENABLE_TRACING_CODE', true );
 define( 'DEV_LOCAL_SERVER_USER', 'your_name' );
-define( 'HIDE_PHP_ERRORS', true );
+define( 'HIDE_PHP_ERRORS', false );
 define( 'VERBOSE_PHP_ERRORS', true );
 
 // Define some variables that are used when developing - DEV_LOCAL_SERVER_DOMAIN should
