@@ -122,6 +122,7 @@ host is ready to be served with your custom domain.
    custom-container/enable-blackfire
    custom-container/enable-elk-stack
    custom-container/enable-mailhog
+   custom-container/enable-meilisearch
    custom-container/enable-ngrok
    custom-container/enable-python-flask
    custom-container/enable-rabbitmq
@@ -177,6 +178,7 @@ host is ready to be served with your custom domain.
 
    examples/setup-cakephp
    examples/setup-codeigniter
+   examples/setup-codeigniter4
    examples/setup-contao
    examples/setup-craftcms
    examples/setup-drupal

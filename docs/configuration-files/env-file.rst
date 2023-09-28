@@ -32,18 +32,18 @@ to ``.env`` to initially create it with sane defaults.
 Core settings
 =============
 
-DEBUG_COMPOSE_ENTRYPOINT
-------------------------
+DEBUG_ENTRYPOINT
+----------------
 
 This variable controls the docker-compose log verbosity during service startup.
 When set to ``1`` verbose output as well as executed commands are shown.
 When set to ``0`` only warnings and errors are shown.
 
-+------------------------------+----------------+---------------+
-| Name                         | Allowed values | Default value |
-+==============================+================+===============+
-| ``DEBUG_COMPOSE_ENTRYPOINT`` | ``0`` or ``1`` | ``1``         |
-+------------------------------+----------------+---------------+
++------------------------------+-----------------------------------+---------------+
+| Name                         | Allowed values                    | Default value |
++==============================+===================================+===============+
+| ``DEBUG_ENTRYPOINT``         | ``0``, ``1``, ``2``, ``3``, ``4`` | ``2``         |
++------------------------------+-----------------------------------+---------------+
 
 
 .. _env_docker_logs:
@@ -659,6 +659,8 @@ All values are already available in the ``.env`` file and just need to be commen
    MYSQL_SERVER=mariadb-10.6
    #MYSQL_SERVER=mariadb-10.7
    #MYSQL_SERVER=mariadb-10.8
+   #MYSQL_SERVER=mariadb-10.9
+   #MYSQL_SERVER=mariadb-10.10
 
 
 .. _env_pgsql_server:
@@ -704,6 +706,8 @@ All values are already available in the ``.env`` file and just need to be commen
    #PGSQL_SERVER=13-alpine
    #PGSQL_SERVER=14
    PGSQL_SERVER=14-alpine
+   #PGSQL_SERVER=15
+   #PGSQL_SERVER=15-alpine
    #PGSQL_SERVER=latest
    #PGSQL_SERVER=alpine
 
@@ -747,6 +751,8 @@ All values are already available in the ``.env`` file and just need to be commen
    #REDIS_SERVER=6.0-alpine
    #REDIS_SERVER=6.2
    REDIS_SERVER=6.2-alpine
+   #REDIS_SERVER=7.0
+   #REDIS_SERVER=7.0-alpine
    #REDIS_SERVER=latest
    #REDIS_SERVER=alpine
 
@@ -1499,8 +1505,8 @@ changing the server name or adding locations to other assets.
 
 .. _env_httpd_timeout_to_php_fpm:
 
-HTTPD_TIMEOUT_TO_PHP_FPM
-^^^^^^^^^^^^^^^^^^^^^^^^
+HTTPD_BACKEND_TIMEOUT
+^^^^^^^^^^^^^^^^^^^^^
 
 This variable specifies after how many seconds the webserver should quit an unanswered connection
 to PHP-FPM.
@@ -1509,17 +1515,17 @@ Ensure that this value is higher than PHP's ``max_execution_time``, otherwise th
 could still run and the webserver will simply drop the connection before getting an answer
 by PHP.
 
-If ``HTTPD_TIMEOUT_TO_PHP_FPM`` is smaller then ``max_execution_time`` and a script runs longer
+If ``HTTPD_BACKEND_TIMEOUT`` is smaller then ``max_execution_time`` and a script runs longer
 than ``max_execution_time``, you will get a: ``504 Gateway timeout`` in the browser.
 
-If ``HTTPD_TIMEOUT_TO_PHP_FPM`` is greater then ``max_execution_time`` and a script runs longer
+If ``HTTPD_BACKEND_TIMEOUT`` is greater then ``max_execution_time`` and a script runs longer
 than ``max_execution_time``, you will get a proper PHP error message in the browser.
 
 
 +------------------------------+-------------------+------------------+
 | Name                         | Allowed values    | Default value    |
 +==============================+===================+==================+
-| ``HTTPD_TIMEOUT_TO_PHP_FPM`` | positive integer  | ``180``          |
+| ``HTTPD_BACKEND_TIMEOUT``    | positive integer  | ``180``          |
 +------------------------------+-------------------+------------------+
 
 HTTPD_NGINX_WORKER_PROCESSES

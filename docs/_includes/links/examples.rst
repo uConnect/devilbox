@@ -4,7 +4,13 @@
      Official CakePHP Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
-.. |ext_lnk_example_codeignitor_documentation| raw:: html
+.. |ext_lnk_example_codeigniter_documentation| raw:: html
+
+   <a target="_blank" href="https://www.codeigniter.com/userguide3/installation/index.html">
+     Official CodeIgniter Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
+   </a>
+
+.. |ext_lnk_example_codeigniter4_documentation| raw:: html
 
    <a target="_blank" href="https://www.codeigniter.com/user_guide/installation/index.html">
      Official CodeIgniter Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
@@ -66,7 +72,7 @@
 
 .. |ext_lnk_example_magento2_documentation| raw:: html
 
-   <a target="_blank" href="https://devdocs.magento.com/guides/v2.2/install-gde/bk-install-guide.html">
+   <a target="_blank" href="https://docs.magento.com/user-guide/v2.3/magento/installation.html">
      Official Magento 2 Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
