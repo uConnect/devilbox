@@ -1,6 +1,5 @@
 <?php
 define( 'WP_HOME', 'http://www.uconnectlabs.test' );
-define( 'WP_SITEURL', WP_HOME );
 
 define( 'DOMAIN_CURRENT_SITE', 'www.uconnectlabs.test' );
 define( 'BLOG_ID_CURRENT_SITE', 2 );
@@ -25,6 +24,7 @@ define( 'UC_REDIS_CONFIG', [
 define( 'WP_CACHE', false );
 
 define( 'UC_GA_PROPERTY_ID', 'UA-19563948-7' );
+define( 'UC_GA4_ROLLUP_ID', 'G-YSM9L27J80' );
 
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_DISPLAY', true );

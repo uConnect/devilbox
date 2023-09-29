@@ -47,8 +47,9 @@
 vhost: |
   <VirtualHost __DEFAULT_VHOST__:__PORT__>
       ServerName __VHOST_NAME__
-      #Wildcard for *.uconnectlabs.com
+      #Wildcard for *.uconnectlabs.test
       ServerAlias *.__VHOST_NAME__
+      ServerAlias career.school.test
       Protocols  __HTTP_PROTO__
 
       CustomLog  "__ACCESS_LOG__" combined
