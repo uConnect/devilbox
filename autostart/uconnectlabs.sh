@@ -7,3 +7,6 @@ cronjob="*/1 * * * * $croncmd"
 
 #Start the cron service
 sudo service cron start
+
+sudo apt-get -qq update
+sudo apt-get -qq install inotify-tools
