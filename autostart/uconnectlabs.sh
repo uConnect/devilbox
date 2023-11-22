@@ -10,3 +10,6 @@ sudo service cron start
 
 sudo apt-get -qq update
 sudo apt-get -qq install inotify-tools
+
+sudo apt-get -qq install gnupg
+sh /shared/httpd/uconnectlabs/htdocs/build-tool/1password-cli-install.sh

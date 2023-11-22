@@ -9,6 +9,8 @@ define( 'DB_USER', 'root' );
 define( 'DB_PASSWORD', '' );
 define( 'DB_HOST', '127.0.0.1' );
 
+define( 'WP_ENVIRONMENT_TYPE', 'local' );
+
 #define('DISABLE_ADMIN_REWRITE', true);
 
 define( 'NOINDEX', true );
