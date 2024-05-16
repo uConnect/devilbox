@@ -81,6 +81,21 @@ services:
       - ELASTICSEARCH_URL=http://elastic:9200
     depends_on:
       - elastic
+  cas-server:
+    image: apereo/cas
+    hostname: cas-server
+    ports: 
+      - 8080:8080
+      - 8433:8433
+    environment:
+      - SERVER_PORT=8433
+    volumes:
+      - ${DEVILBOX_PATH}/CAS/config:/etc/cas/config:ro${MOUNT_OPTIONS}
+      - ${DEVILBOX_PATH}/CAS/services:/etc/cas/services:ro${MOUNT_OPTIONS}
+      - ${DEVILBOX_PATH}/CAS/certificates/keystore:/etc/cas/thekeystore:rw${MOUNT_OPTIONS}
+    networks:
+      - app_net
+
 
 volumes:
   devilbox-elastic:
