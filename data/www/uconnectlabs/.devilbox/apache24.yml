@@ -50,6 +50,8 @@ vhost: |
       #Wildcard for *.uconnectlabs.test
       ServerAlias *.__VHOST_NAME__
       ServerAlias career.school.test
+      ServerAlias candidcareer.com
+      ServerAlias *.candidcareer.com
       Protocols  __HTTP_PROTO__
 
       CustomLog  "__ACCESS_LOG__" combined
