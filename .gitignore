@@ -252,3 +252,6 @@ $RECYCLE.BIN/
 ###### VS Code ######
 /.vscode
 *.code-workspace
+
+##### CAS #####
+/CAS/certificates/*
