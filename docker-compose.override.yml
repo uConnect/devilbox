@@ -103,7 +103,7 @@ services:
     networks:
       - app_net
     depends_on:
-      - cas-cert
+      - cas-cert-generator
 
 
 volumes:
