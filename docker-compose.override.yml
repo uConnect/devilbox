@@ -81,6 +81,30 @@ services:
       - ELASTICSEARCH_URL=http://elastic:9200
     depends_on:
       - elastic
+  cas-cert-generator:
+    build:
+      context: ./CAS
+      dockerfile: Dockerfile
+    volumes:
+      - ${DEVILBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}  
+      - ${DEVILBOX_PATH}/CAS/certificates:/certs:rwx${MOUNT_OPTIONS}    
+  cas-server:
+    image: apereo/cas:7.0.4
+    hostname: cas-server
+    ports: 
+      - 8080:8080
+      - 8433:8433
+    environment:
+      - SERVER_PORT=8433
+    volumes:
+      - ${DEVILBOX_PATH}/CAS/config:/etc/cas/config:ro${MOUNT_OPTIONS}
+      - ${DEVILBOX_PATH}/CAS/services:/etc/cas/services:ro${MOUNT_OPTIONS}
+      - ${DEVILBOX_PATH}/CAS/certificates:/etc/cas:rw${MOUNT_OPTIONS}
+    networks:
+      - app_net
+    depends_on:
+      - cas-cert-generator
+
 
 volumes:
   devilbox-elastic:

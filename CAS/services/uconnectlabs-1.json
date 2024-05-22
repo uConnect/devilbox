@@ -1,0 +1,14 @@
+{
+  "@class" : "org.apereo.cas.services.CasRegisteredService",
+  "serviceId" : "^https://.*",
+  "name": "uconnectlabs",
+  "id" : 1,
+  "matchingStrategy": {
+    "@class": "org.apereo.cas.services.FullRegexRegisteredServiceMatchingStrategy"
+  },
+  "accessStrategy" : {
+    "@class": "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "enabled": true,
+    "ssoEnabled": true
+  }
+}
