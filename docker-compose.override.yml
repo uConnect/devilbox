@@ -89,7 +89,7 @@ services:
       - ${DEVILBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}  
       - ${DEVILBOX_PATH}/CAS/certificates:/certs:rwx${MOUNT_OPTIONS}    
   cas-server:
-    image: apereo/cas
+    image: apereo/cas:7.0.4
     hostname: cas-server
     ports: 
       - 8080:8080
