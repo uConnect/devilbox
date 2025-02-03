@@ -26,6 +26,8 @@
 !/data/www/uconnectlabs/ruleset.xml
 !/data/www/uconnectlabs/bin
 !/data/www/uconnectlabs/build-tool
+!/data/www/school/.devilbox
+!/data/www/school/htdocs
 # Ignore Certificate Authority
 /ca/*
 
